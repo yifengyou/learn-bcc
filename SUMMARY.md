@@ -1,22 +1,6 @@
-# bcc学习笔记
+# Summary
 
-![20210511_165108_24](image/20210511_165108_24.png)
-
-## 本仓库内容
-
-1. bcc学习笔记
-
-* 源码仓库 : <http://github.com/iovisor/bcc>
-
-```
-Something I hope you know before go into the coding ~
-First, please watch or star this repo, I'll be more happy if you follow me.
-Bug report, questions and discussion are welcome, you can post an issue or pull a request.
-```
----
-
-## 目录
-
+* [读我](README.md)
 * [bcc安装](docs/bcc安装.md)
     * [Ubuntu1804环境安装bcc](docs/bcc安装/Ubuntu1804环境安装bcc.md)
     * [CentOS7安装bcc](docs/bcc安装/CentOS7安装bcc.md)
@@ -32,6 +16,3 @@ Bug report, questions and discussion are welcome, you can post an issue or pull 
     * [IO](docs/bcc经典案例/IO.md)
     * [存储](docs/bcc经典案例/存储.md)
 
-
-
---
