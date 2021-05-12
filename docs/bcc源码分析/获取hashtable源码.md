@@ -216,6 +216,27 @@ enum bpf_map_type {
 };
 ```
 
+eBPF-map 类型:
+
+```
+BPF_MAP_TYPE_UNSPEC
+BPF_MAP_TYPE_HASH  eBPF-maps hash表，是主要用的前两种方式之一
+BPF_MAP_TYPE_ARRAY 和上面类似，除了索引像数组一样
+BPF_MAP_TYPE_PROG_ARRAY 将加载的eBPF程序的文件描述符保存其值，常用的是使用数字识别不同的eBPF程序类型，也可以从一个给定key值的eBPF-maps找到eBPF程序，并且跳转到程序中去
+BPF_MAP_TYPE_PERF_EVENT_ARRAY 配合perf工具，CPU性能计数器，tracepoints，kprobes和uprobes。可以查看路径samples/bpf/下的tracex6_kern.c，tracex6_user.c，tracex6_kern.c，tracex6_user.c
+BPF_MAP_TYPE_PERCPU_HASH 和BPF_MAP_TYPE_HASH一样，除了是为每个CPU创建
+BPF_MAP_TYPE_PERCPU_ARRAY 和BPF_MAP_TYPE_ARRAY一样，除了是为每个CPU创建
+BPF_MAP_TYPE_STACK_TRACE 用于存储stack-traces
+BPF_MAP_TYPE_CGROUP_ARRAY 检查skb的croup归属
+BPF_MAP_TYPE_LRU_HASH
+BPF_MAP_TYPE_LRU_PERCPU_HASH
+BPF_MAP_TYPE_LPM_TRIE 最专业的用法，LPM(Longest Prefix Match)的一种trie
+BPF_MAP_TYPE_ARRAY_OF_MAPS 可能是针对每个port的
+BPF_MAP_TYPE_HASH_OF_MAPS 可能是针对每个port的
+BPF_MAP_TYPE_DEVMAP 可能是定向报文到dev的
+BPF_MAP_TYPE_SOCKMAP 可能是连接socket的
+```
+
 
 
 
